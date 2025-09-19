@@ -409,6 +409,7 @@
         
         .announcement-date i {
             margin-right: 8px;
+            color: #4e54c8;
         }
         
         /* Kontak */
@@ -674,7 +675,12 @@
                 font-size: 0.85rem;
             }
             
-            .student-grid,
+            /* PERBAIKAN UTAMA: Mengatur grid untuk daftar siswa di perangkat mobile */
+            .student-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
             .contact-grid,
             .gallery-container {
                 grid-template-columns: 1fr;
@@ -706,6 +712,14 @@
             .student-img {
                 height: 140px;
             }
+            
+            .student-info h5 {
+                font-size: 0.9rem;
+            }
+            
+            .student-info p {
+                font-size: 0.8rem;
+            }
         }
 
         @media (max-width: 400px) {
@@ -733,6 +747,11 @@
             .schedule-table td {
                 padding: 6px 4px;
                 font-size: 0.75rem;
+            }
+            
+            /* Untuk layar sangat kecil, ubah menjadi 1 kolom */
+            .student-grid {
+                grid-template-columns: 1fr;
             }
         }
 
